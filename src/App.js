@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Button from '@material-ui/core/Button';
+import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 import './App.css';
 import background from './images/background.png'
 import building from './images/building.png'
@@ -8,13 +9,31 @@ import buildingBW from './images/building-BW.png'
 import bokeh1 from './images/bokeh1.png'
 import bokeh2 from './images/bokeh2.png'
 
-import { useTransition, useSpring, animated, config } from 'react-spring'
+import { useTransition, useSpring, animated, config, interpolate } from 'react-spring'
 
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import Box from '@material-ui/core/Box';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+
+let  theme = createMuiTheme();
+theme = responsiveFontSizes(theme)
+theme.typography.h1 = {
+    fontSize: '6rem',
+    lineHeight: '80%',
+    '@media (min-width:330px)': {
+      fontSize: '8rem',
+    },
+    '@media (min-width:800px)': {
+      fontSize: '8rem',
+    },
+    '@media (min-width:1000px)': {
+      fontSize: '10rem',
+    },
+  }
+
+// 
 
 const useStyles = makeStyles({
   root: {
@@ -41,6 +60,8 @@ function App() {
     // })
   })
 
+  const { x } = useSpring({ from: { x: 0 }, x: 1, config: { duration: 1000 } })
+
   const lightTranslate = useSpring({
     transform: toggle2 ? 'translate3d(1px,1px,1px)' : 'translate3d(2px,2px,1px)',
     duration: 100,
@@ -53,7 +74,8 @@ function App() {
 
 
   return (
-  <Typography component="div">
+    <ThemeProvider theme={theme}>
+      <Typography component="div">
     
       <Parallax pages={2}
       style={{ 
@@ -72,17 +94,22 @@ function App() {
           speed={-.5}
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
-          <animated.div style={{
-            color: 'white', width: '80%'}}>
-            <Box fontWeight="fontWeightBold" fontSize={70} letterSpacing={-4} lineHeight={1}>
+          <animated.div style={{color: 'white', width: '90vw',
+            opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+            
+            }}>
+
+            <Typography variant='h1'>
               Hi, <br/>I'm Ricky
+            </Typography>
+            <Box mt={3}>
+            <Typography variant='h3'>
+               Full Stack Developer & <br/>Grahpic Designer
+            </Typography>
             </Box>
-            <Box fontWeight="fontWeightLight" fontSize={17} letterSpacing={5} mt={2}>
-            Full Stack Developer  &   <br/>Grahpic Designer
-            </Box>
-            <Box fontWeight="fontWeightLight" fontSize={12} letterSpacing={2} mt={2}>
+            <Typography variant='overline'>
             from physical to digital @ Vancouver
-            </Box>
+            </Typography>
           </animated.div>
         </ParallaxLayer>
 
@@ -145,6 +172,7 @@ function App() {
 
       </Parallax>
     </Typography>
+    </ThemeProvider>
   );
 }
 
