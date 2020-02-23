@@ -23,7 +23,7 @@ theme.typography.h1 = {
     fontSize: '6rem',
     lineHeight: '80%',
     '@media (min-width:330px)': {
-      fontSize: '8rem',
+      fontSize: '7rem',
     },
     '@media (min-width:800px)': {
       fontSize: '8rem',
@@ -77,7 +77,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Typography component="div">
     
-      <Parallax pages={2}
+      <Parallax pages={4}
       style={{ 
         backgroundColor: 'black', 
         backgroundImage: `url(${background})`,   
@@ -96,11 +96,10 @@ function App() {
           >
           <animated.div style={{color: 'white', width: '90vw',
             opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
-            
-            }}>
+          }}>
 
             <Typography variant='h1'>
-              Hi, <br/>I'm Ricky
+              Hi, <br/>I'm Ricky<span style={{color:'red'}}>.</span>
             </Typography>
             <Box mt={3}>
             <Typography variant='h3'>
@@ -157,8 +156,76 @@ function App() {
 
           </animated.div>
          
+          {/* About me */}
+        <ParallaxLayer offset={0.999} speed={.35} style={{ backgroundColor: 'black', height: 600 }} />
 
-        <ParallaxLayer offset={0.999} speed={.3} style={{ backgroundColor: 'black' }} />
+        <ParallaxLayer offset={0.99} speed={.15} 
+        style={{ display: 'flex', justifyContent: 'center' }}
+          >
+          <animated.div style={{color: 'white', width: '90vw',
+            opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+          }}>
+            <Box mt={2}>
+            <Typography variant='h1'>
+                About me<span style={{color:'red'}}>.</span>
+            </Typography>
+            </Box>
+          </animated.div>
+          <animated.div style={{color: 'white', width: '90vw',
+            opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+          }}>
+            <Box mt={2}>
+            <Typography variant='p'>
+                I am Ricky. I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah
+            </Typography>
+            </Box>
+          </animated.div>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={1.1} speed={.3} 
+        style={{ display: 'flex', justifyContent: 'center' }}
+          >
+          {/* <animated.div style={{color: 'white', width: '90vw',
+            opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+          }}>
+            <Box mt={2}>
+            <Typography variant='p'>
+                I am Ricky. I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah
+            </Typography>
+            </Box>
+          </animated.div> */}
+        </ParallaxLayer>
+
+   {/* App Deveploment */}
+        {/* <ParallaxLayer offset={1.999} speed={.35} style={{ backgroundColor: 'blue' }} />
+
+        <ParallaxLayer offset={1.99} speed={.15} 
+        style={{ display: 'flex', justifyContent: 'center' }}
+          >
+          <animated.div style={{color: 'white', width: '90vw',
+            opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+          }}>
+            <Box mt={2}>
+            <Typography variant='h1'>
+                About me<span style={{color:'red'}}>.</span>
+            </Typography>
+            </Box>
+          </animated.div>
+        </ParallaxLayer>
+          
+        <ParallaxLayer offset={1} speed={.15} 
+        style={{ display: 'flex', justifyContent: 'center' }}
+          >
+          <animated.div style={{color: 'white', width: '90vw',
+            opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+          }}>
+            <Box mt={2}>
+            <Typography variant='p'>
+                I am Ricky. I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah
+            </Typography>
+            </Box>
+          </animated.div>
+        </ParallaxLayer> */}
 
         {/* <ParallaxLayer offset={1} speed={0.5}>
           <span onClick={() => props.parallax.scrollTo(1)}>Layers can contain anything</span>
