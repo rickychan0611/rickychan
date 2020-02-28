@@ -158,23 +158,56 @@ function App() {
         </animated.div>
 
         {/* About me background */}
-        <ParallaxLayer offset={0.999} speed={.25} style={{
-          height: 550,
-          backgroundImage: 'linear-gradient(to bottom left, #2e343d, #000000)'
+        <ParallaxLayer offset={0.999} speed={.2} style={{
+          // height: '50%',
+          backgroundImage: 'linear-gradient(to bottom right, #2e343d, #000000)'
         }} />
 
-        {/* My face */}
-        <ParallaxLayer offset={0.999} speed={.33} style={{
-          display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', 
-        }}>
-          <img src={ricky} style={{ bottom: 0, height: '100%' }} />
-        </ParallaxLayer>
+        {/* My face >SM*/}
+        <Box display={{ xs: 'none', sm: 'block' }}>
+          <ParallaxLayer offset={0.999} speed={.33} style={{
+            display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-end', 
+          }}>
+            <img src={ricky} style={{ bottom: 0, height: 600 }} />
+          </ParallaxLayer>
+        </Box>
+
+        {/* My face XS*/}
+        <Box display={{ xs: 'block', sm: 'none' }}>
+          <ParallaxLayer offset={0.999} speed={.33} style={{
+            display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-end', 
+          }}>
+            <img src={ricky} style={{ bottom: 0, height: 500 }} />
+          </ParallaxLayer>
+        </Box>
 
 
-        {/* About me text */}
-        <ParallaxLayer offset={0.999} speed={.15}>
+        {/* About me text >SM */}
+        <Box display={{ xs: 'none', sm: 'block' }}>
+        <ParallaxLayer offset={1} speed={.15}>
           <div style={{
-            display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column',
+            display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column', 
+        }}  >
+          <div style={{color: 'white', marginLeft: '5%', flex: 1}}>
+            <Typography variant='h1'>
+              About me
+              <span style={{ color: 'red' }}>.</span>
+            </Typography>
+            </div>
+            <div style={{color: 'white',  marginLeft: '5%', marginRight: '5%', marginTop: 20, marginBottom: '5%', flex: 1, maxWidth: 900}}>
+            <Typography variant='p'>
+              I am Ricky. I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah
+            </Typography>
+            </div>
+          </div>
+        </ParallaxLayer>
+        </Box>
+
+        {/* About me text XS */}
+        <Box display={{ xs: 'block', sm: 'none' }}>
+        <ParallaxLayer offset={1.1} speed={.15}>
+          <div style={{
+            display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column'
         }}  >
           <div style={{color: 'white', marginLeft: '5%', flex: 1 }}>
             <Typography variant='h1'>
@@ -182,23 +215,26 @@ function App() {
               <span style={{ color: 'red' }}>.</span>
             </Typography>
             </div>
-            <div style={{color: 'white', flex: 2}}>
+            <div style={{color: 'white',  marginLeft: '5%', marginRight: '5%', marginTop: 20, flex: 1, maxWidth: 700}}>
             <Typography variant='p'>
               I am Ricky. I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah I have 13 years of experience in graphic deisgner. blah
             </Typography>
             </div>
           </div>
         </ParallaxLayer>
+        </Box>
 
-          {/* APP background */}
-          <ParallaxLayer offset={1.2} speed={.25} style={{
-            height: 1000,
+
+
+          {/* APP background color */}
+          <ParallaxLayer offset={1.7} speed={.4} style={{
+            // height: 1000,
             backgroundImage: 'linear-gradient(to bottom right, #6e1357, #6e1336)'
           }} />
 
 
           {/* APP devepolement */}
-        <ParallaxLayer offset={1.5} speed={.15}
+        <ParallaxLayer offset={1.8} speed={.15}
           style={{maxWidth: '90vw', display: 'block',
           paddingLeft: '5%',
           paddingRight: '5%',
