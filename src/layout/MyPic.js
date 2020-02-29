@@ -20,7 +20,7 @@ const MyPic = () => {
         <ParallaxLayer offset={0.999} speed={.33} style={{
           display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-end', width: '95vw'
         }}>
-          <img src={ricky} style={{ bottom: 0, height: 550 }} />
+          <img src={ricky} style={{ bottom: 0, height: 600 }} />
         </ParallaxLayer>
       </Hidden>
 

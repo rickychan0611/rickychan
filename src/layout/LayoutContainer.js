@@ -67,34 +67,34 @@ const LayoutContainer = () => {
         </ParallaxLayer>
 
         {/* About me background */}
-        <ParallaxLayer offset={0.999} speed={.2} className={classes.aboutMeBackground} />
+        {/* XS only */}
+        <Hidden smUp>
+        <ParallaxLayer offset={0.999} speed={.15} className={classes.aboutMeBackground} style={{height: '100%'}}/>
+        </Hidden>
+
+
+        {/* About me background */}
+        {/* >Md */}
+        <Hidden mdDown>
+        <ParallaxLayer offset={0.999} speed={.2} className={classes.aboutMeBackground}/>
+        </Hidden>
+
+        {/* About me background */}
+         {/* Md only */}
+         <Hidden only={['xs', 'lg', 'xl']}>
+        <ParallaxLayer offset={0.999} speed={.2} className={classes.aboutMeBackground}  style={{height: 1000}} />
+        </Hidden>
 
         <MyPic />
 
-        {/* APP background color */}
-        <ParallaxLayer offset={1.7} speed={.4} style={{
+          {/* APP background color */}
+        <ParallaxLayer offset={1.9} speed={.2} style={{
           // height: 1000,
           backgroundImage: 'linear-gradient(to bottom right, #6e1357, #6e1336)'
         }} />
 
-        {/* About me text >SM */}
-        <Box display={{ xs: 'none', sm: 'block' }}>
-          <ParallaxLayer offset={1} speed={.15}>
-            <div style={{
-              display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column',
-            }}  >
-              <div style={{ color: 'white', marginLeft: '5%', flex: 1 }}>
-                <Typography variant='h1'> About me <span style={{ color: 'red' }}>.</span> </Typography>
-              </div>
-              <div style={{ color: 'white', marginLeft: '5%', marginRight: '5%', marginTop: 20, marginBottom: '5%', flex: 1, maxWidth: 900 }}>
-                <AboutMeText />
-              </div>
-            </div>
-          </ParallaxLayer>
-        </Box>
-
-        {/* XS only */}
-      <Hidden smUp>
+        {/* AboutMeText XS only */}
+        <Hidden smUp>
           <ParallaxLayer offset={1.1} speed={.15}>
             <div style={{
               display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column'
@@ -105,20 +105,55 @@ const LayoutContainer = () => {
               <span style={{ color: 'red' }}>.</span>
                 </Typography>
               </div>
-              <div style={{ color: 'white', marginLeft: '5%', marginRight: '5%', marginTop: 20, flex: 1, maxWidth: 700 }}>
-              <AboutMeText />
+              <div style={{ color: 'white', marginLeft: '5%', marginRight: '5%', marginTop: 20, flex: 1, maxWidth: 700, fontSize: 18 }}>
+                <AboutMeText />
               </div>
             </div>
           </ParallaxLayer>
         </Hidden>
 
+        {/*AboutMeText >Md */}
+        <Hidden mdDown>
+          <ParallaxLayer offset={1} speed={.15}>
+            <div style={{
+              display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column',
+            }}  >
+              <div style={{ color: 'white', marginLeft: '5%', flex: 1 }}>
+                <Typography variant='h1'> About me <span style={{ color: 'red' }}>.</span> </Typography>
+              </div>
+              <div style={{ color: 'white', marginLeft: '5%', marginRight: '5%', marginTop: 20, marginBottom: '5%', flex: 1, maxWidth: 900, fontSize: 26 }}>
+                <AboutMeText />
+              </div>
+            </div>
+          </ParallaxLayer>
+        </Hidden>
+
+        {/*AboutMeText Md only */}
+        <Hidden only={['xs', 'lg', 'xl']}>
+          <ParallaxLayer offset={1.1} speed={.15}>
+            <div style={{
+              display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column',
+            }}  >
+              <div style={{ color: 'white', marginLeft: '5%', flex: 1 }}>
+                <Typography variant='h1'> About&nbsp;me <span style={{ color: 'red' }}>.</span> </Typography>
+              </div>
+              <div style={{ color: 'white', marginLeft: '5%', marginRight: '5%', marginTop: 30, marginBottom: '5%', flex: 1, maxWidth: 900, fontSize: 26 }}>
+                <AboutMeText />
+              </div>
+            </div>
+          </ParallaxLayer>
+        </Hidden>
+
+
+
+
+
         {/* APP devepolement */}
-        <ParallaxLayer offset={1.8} speed={.15}
+        <ParallaxLayer offset={2} speed={.15}
           style={{
-            maxWidth: '90vw', display: 'block',
+            display: 'block',
             paddingLeft: '5%',
             paddingRight: '5%',
-
           }}
         >
           <Box color='white' mt={2} style={{}}>
