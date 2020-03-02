@@ -11,6 +11,9 @@ import bokeh1 from '../images/bokeh1.png'
 import bokeh2 from '../images/bokeh2.png'
 import ricky from '../images/ricky.png'
 import restApp from '../images/restApp.png'
+import letMeOrder from '../images/letMeOrder.png'
+import Icon from '@material-ui/core/Icon';
+
 
 import { useTransition, useSpring, animated, config, interpolate } from 'react-spring'
 
@@ -23,9 +26,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 import MyName from './MyName'
+import AboutMe from './AboutMe'
+
 import AboutMeText from '../components/AboutMeText'
+import LetMeOrder from './LetMeOrder'
 import useStyles from './styles'
-import MyPic from './MyPic';
 
 
 const LayoutContainer = () => {
@@ -40,7 +45,6 @@ const LayoutContainer = () => {
         <ParallaxLayer offset={0} speed={-.5} className={classes.myName}>
           <MyName />
         </ParallaxLayer>
-
 
         {/* Building background*/}
         <ParallaxLayer offset={0} speed={0.1}
@@ -66,122 +70,32 @@ const LayoutContainer = () => {
           }}>
         </ParallaxLayer>
 
-        {/* About me background */}
-        {/* XS only */}
-        <Hidden smUp>
-        <ParallaxLayer offset={0.999} speed={.15} className={classes.aboutMeBackground} style={{height: '100%'}}/>
-        </Hidden>
-
-
-        {/* About me background */}
-        {/* >Md */}
-        <Hidden mdDown>
-        <ParallaxLayer offset={0.999} speed={.2} className={classes.aboutMeBackground}/>
-        </Hidden>
-
-        {/* About me background */}
-         {/* Md only */}
-         <Hidden only={['xs', 'lg', 'xl']}>
-        <ParallaxLayer offset={0.999} speed={.2} className={classes.aboutMeBackground}  style={{height: 1000}} />
-        </Hidden>
-
-        <MyPic />
-
-          {/* APP background color */}
-        <ParallaxLayer offset={1.9} speed={.2} style={{
-          // height: 1000,
-          backgroundImage: 'linear-gradient(to bottom right, #6e1357, #6e1336)'
-        }} />
-
-        {/* AboutMeText XS only */}
-        <Hidden smUp>
-          <ParallaxLayer offset={1.1} speed={.15}>
-            <div style={{
-              display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column'
-            }} >
-              <div style={{ color: 'white', marginLeft: '5%', flex: 1 }}>
-                <Typography variant='h1'>
-                  About me
-              <span style={{ color: 'red' }}>.</span>
-                </Typography>
-              </div>
-              <div style={{ color: 'white', marginLeft: '5%', marginRight: '5%', marginTop: 20, flex: 1, maxWidth: 700, fontSize: 18 }}>
-                <AboutMeText />
-              </div>
-            </div>
-          </ParallaxLayer>
-        </Hidden>
-
-        {/*AboutMeText >Md */}
-        <Hidden mdDown>
-          <ParallaxLayer offset={1} speed={.15}>
-            <div style={{
-              display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column',
-            }}  >
-              <div style={{ color: 'white', marginLeft: '5%', flex: 1 }}>
-                <Typography variant='h1'> About me <span style={{ color: 'red' }}>.</span> </Typography>
-              </div>
-              <div style={{ color: 'white', marginLeft: '5%', marginRight: '5%', marginTop: 20, marginBottom: '5%', flex: 1, maxWidth: 900, fontSize: 26 }}>
-                <AboutMeText />
-              </div>
-            </div>
-          </ParallaxLayer>
-        </Hidden>
-
-        {/*AboutMeText Md only */}
-        <Hidden only={['xs', 'lg', 'xl']}>
-          <ParallaxLayer offset={1.1} speed={.15}>
-            <div style={{
-              display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column',
-            }}  >
-              <div style={{ color: 'white', marginLeft: '5%', flex: 1 }}>
-                <Typography variant='h1'> About&nbsp;me <span style={{ color: 'red' }}>.</span> </Typography>
-              </div>
-              <div style={{ color: 'white', marginLeft: '5%', marginRight: '5%', marginTop: 30, marginBottom: '5%', flex: 1, maxWidth: 900, fontSize: 26 }}>
-                <AboutMeText />
-              </div>
-            </div>
-          </ParallaxLayer>
-        </Hidden>
-
-
-
-
+        <AboutMe />
 
         {/* APP devepolement */}
         <ParallaxLayer offset={2} speed={.15}
           style={{
+            width:'85%',
             display: 'block',
             paddingLeft: '5%',
             paddingRight: '5%',
           }}
         >
-          <Box color='white' mt={2} style={{}}>
+          <Box mt={2} style={{}}>
             <Typography variant='h1'>
               App dev<span style={{ color: 'red' }}>.</span>
             </Typography>
           </Box>
-          <Box color='white' mt={8} style={{}}>
-            <Typography variant='overline'>
-              My latest projects:
+          <Box mt={8} style={{}}>
+            <Typography variant='h3'>
+              My projects:
+              <hr></hr>
             </Typography>
 
-            <Grid container>
-              <Grid xs={12} md={6}>
-                <Typography variant='h3' style={{ marginTop: 20 }}>
-                  Restaurant Ordering System
-            </Typography>
-                <Typography variant='body2' style={{ marginTop: 10 }}>
-                  Technologies:
-            </Typography>
-              </Grid>
+           <LetMeOrder />
 
-              <Grid xs={12} md={6}>
-                <img src={restApp} style={{ height: 340, bottom: 0 }} />
-              </Grid>
-
-            </Grid>
           </Box>
+          <hr/>
         </ParallaxLayer>
 
         {/* <ParallaxLayer offset={1} speed={0.5}>

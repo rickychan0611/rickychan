@@ -24,6 +24,7 @@ const useStyles = makeStyles({
     backgroundAttachment: 'fixed',
     backgroundPosition: 'right top',
     display: 'flex',
+    paddingRight: 30
   },
   myName: {
     display: 'flex',
