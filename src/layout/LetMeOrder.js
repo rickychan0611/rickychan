@@ -20,9 +20,10 @@ const scsreenshots = [
   { src: screenshot3, width: 50 },
   { src: screenshot4, width: 50 },
   { src: screenshot5, width: 50 },
-  { src: screenshot6, width: 160 },
-  { src: screenshot7, width: 160 },
+  { src: screenshot6, width: 130 },
+  { src: screenshot7, width: 130 },
 ]
+
 const LetMeOrder = () => {
     const [openModal, setOpenModal] = useState(false)
 

@@ -23,7 +23,7 @@ const AboutMe = () => {
       {/* --------------- About me background ---------------- */}
         {/* XS only */}
       <Hidden smUp>
-        <ParallaxLayer offset={0.999} speed={.15} className={classes.aboutMeBackground} style={{ height: '100%' }} />
+        <ParallaxLayer offset={0.999} speed={.15} className={classes.aboutMeBackground} style={{ height: 1000 }} />
       </Hidden>
 
 
@@ -48,7 +48,7 @@ const AboutMe = () => {
       {/* APP background color */}
       <ParallaxLayer offset={1.9} speed={.4} style={{
         backgroundImage: 'linear-gradient(to bottom right, #ffffff, #c2c0c0)',
-        height: 4500
+        height: '120%'
       }} />
       <ParallaxLayer offset={1.9} speed={.4} style={{
          width: '100%',

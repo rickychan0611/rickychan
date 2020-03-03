@@ -39,8 +39,8 @@ const ModalPic = ( { open, close, modalImg } ) => {
         }}
         style={{outline: 'none'}}
       >
-        <Fade in={open}>
-             <img src={modalImg} style={{ width:'80%', margin:'80%', outline:"none"}}/>
+        <Fade in={open} >
+             <img src={modalImg} style={{ height:'90%', width:'90%', margin:'80%', outline:"none", objectFit: 'scale-down'}} onClick={close}/>
         </Fade>
       </Modal>
     </div>
