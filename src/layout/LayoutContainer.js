@@ -9,7 +9,8 @@ import AboutMe from './AboutMe'
 import LetMeOrder from './LetMeOrder'
 import AmzClub from './AmzClub'
 import BoomTown from './BoomTown'
-
+import R10 from './R10'
+import Laviro from './Laviro'
 
 import useStyles from './styles'
 
@@ -77,6 +78,10 @@ const LayoutContainer = () => {
            <AmzClub />
            <br/><br/><hr/><br/><br/>
            <BoomTown />
+           <br/><br/><hr/><br/><br/>
+           <R10 />
+           <br/><br/><hr/><br/><br/>
+           <Laviro />
 
 
           </Box>

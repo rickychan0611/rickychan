@@ -48,7 +48,7 @@ const AboutMe = () => {
       {/* APP background color */}
       <ParallaxLayer offset={1.9} speed={.4} style={{
         backgroundImage: 'linear-gradient(to bottom right, #ffffff, #c2c0c0)',
-        height: 4000
+        height: 4500
       }} />
       <ParallaxLayer offset={1.9} speed={.4} style={{
          width: '100%',

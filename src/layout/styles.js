@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     padding: 0,
+    outline: 'none'
   },
   parallax: {
     backgroundColor: 'black',
