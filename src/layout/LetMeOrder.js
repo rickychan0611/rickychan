@@ -15,7 +15,7 @@ const LetMeOrder = () => {
           LetMe Order
       </Typography>
         <Typography variant='body1' style={{ marginTop: 10 }}>
-          LetMe Order is a restaurant self ordering system that allows customers to order their food together! This app aims for restaurants that serve many items for a table, such as Chinese dim sum restaurants, Japanese sushi restaurants, and hotpot restaurants. The system has a very low setup cost and it allows every customer at the same table to place orders together from their own mobile phones. Customers can see updates in real-time and in-app services request functions. It also comes with kitchen side interface and control panel to manage orders and items.
+          LetMe Order is a restaurant self ordering system that allows customers to order their food together (not alone)! I have already convinced 2 Restaurants to use the app. This app aims for restaurants that serve many items for a table, such as Chinese dim sum restaurants, Japanese sushi restaurants, and hotpot restaurants etc. The system has a very low setup cost and it allows every customer at the same table to place orders together from their own mobile phones. Customers can see updates in real-time and in-app services request functions. It also comes with kitchen side interface and control panel to manage orders and items.
       </Typography>
 
       <Box mt={6}>
@@ -27,15 +27,22 @@ const LetMeOrder = () => {
       </Box>
 
       <Box mt={6}>
-        <Button variant="outlined" color="primary"  style={{marginRight: 20, marginTop: 20}}>
+        <Button variant="outlined" color="primary"  style={{marginRight: 20, marginTop: 20}}
+          onClick={()=> window.open("http://159.203.43.46", "_blank")}
+          >
           Customer view demo
         </Button>
 
-        <Button variant="outlined" color="primary"  style={{marginRight: 20, marginTop: 20}}>
+        <Button variant="outlined" color="primary"  style={{marginRight: 20, marginTop: 20}}
+          onClick={()=> window.open("http://159.203.43.46/menu-control", "_blank")}
+        >
         Admin view demo
         </Button>
 
-        <Button startIcon={<i class="fa fa-github" aria-hidden="true" />} style={{marginRight: 20, marginTop: 20}}>
+        <Button startIcon={<i class="fa fa-github" aria-hidden="true" />} 
+        style={{marginRight: 20, marginTop: 20}}
+        onClick={()=> window.open("https://github.com/fyeung21/self-order", "_blank")}
+        >
           Source code
           </Button>
         </Box>

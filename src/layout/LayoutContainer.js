@@ -1,37 +1,17 @@
 import React from 'react';
-
-import ReactDOM from 'react-dom';
-
-import Button from '@material-ui/core/Button';
-import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
-import background from '../images/background.png'
-import building from '../images/building.png'
 import buildingBW from '../images/building-BW.png'
 import bokeh1 from '../images/bokeh1.png'
-import bokeh2 from '../images/bokeh2.png'
-import ricky from '../images/ricky.png'
-import restApp from '../images/restApp.png'
-import letMeOrder from '../images/letMeOrder.png'
-import Icon from '@material-ui/core/Icon';
-
-
-import { useTransition, useSpring, animated, config, interpolate } from 'react-spring'
-
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-
-import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-
 import MyName from './MyName'
 import AboutMe from './AboutMe'
-
-import AboutMeText from '../components/AboutMeText'
 import LetMeOrder from './LetMeOrder'
-import useStyles from './styles'
+import AmzClub from './AmzClub'
+import BoomTown from './BoomTown'
 
+
+import useStyles from './styles'
 
 const LayoutContainer = () => {
 
@@ -39,7 +19,7 @@ const LayoutContainer = () => {
 
   return (
     <div>
-      <Parallax pages={4} className={classes.parallax}>
+      <Parallax pages={8} className={classes.parallax}>
 
         {/* my name */}
         <ParallaxLayer offset={0} speed={-.5} className={classes.myName}>
@@ -93,6 +73,11 @@ const LayoutContainer = () => {
             </Typography>
 
            <LetMeOrder />
+           <br/><br/><hr/><br/><br/>
+           <AmzClub />
+           <br/><br/><hr/><br/><br/>
+           <BoomTown />
+
 
           </Box>
           <hr/>
