@@ -23,20 +23,23 @@ const AboutMe = () => {
       {/* --------------- About me background ---------------- */}
         {/* XS only */}
       <Hidden smUp>
-        <ParallaxLayer factor={.5} offset={0.999} speed={.15} className={classes.aboutMeBackground} style={{ height: 1000 }} />
+        <ParallaxLayer factor={1.9} offset={0.999} speed={.15} className={classes.aboutMeBackground} 
+        style={{  }} />
       </Hidden>
 
 
       {/* About me background */}
       {/* >Md */}
       <Hidden mdDown>
-        <ParallaxLayer factor={.5} offset={0.999} speed={.2} className={classes.aboutMeBackground} style={{ height: 1000 }} />
+        <ParallaxLayer factor={.5} offset={0.999} speed={.2} className={classes.aboutMeBackground} 
+        style={{ height: 1000 }} />
       </Hidden>
 
       {/* About me background */}
       {/* Md only */}
       <Hidden only={['xs', 'lg', 'xl']}>
-        <ParallaxLayer factor={.5} offset={0.999} speed={.2} className={classes.aboutMeBackground} style={{ height: 1000 }} />
+        <ParallaxLayer factor={.5} offset={0.999} speed={.3} className={classes.aboutMeBackground} 
+        style={{ height: 1000 }} />
       </Hidden>
 
       {/* --------------MyPic----------------- */}
@@ -44,25 +47,61 @@ const AboutMe = () => {
 
 
       {/* ---------------APP dev background ---------------- */}
+    {/* XS only */}
+       <Hidden smUp>
+          {/* APP background color */}
+          <ParallaxLayer factor={17} offset={2.1} speed={.5} style={{
+            // backgroundImage: 'linear-gradient(to bottom right, #ffffff, #ffffff)',
+            // height: '100%'
+          }} />
+          <ParallaxLayer  offset={2.1} speed={.5} style={{
+            width: '100%',
+            backgroundImage: `url(${code})`,
+            //  backgroundSize: 'auto 100%',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'left top',
+            //  mixBlendMode: 'color-dodge',
+          }} />
+      </Hidden>
 
-      {/* APP background color */}
-      <ParallaxLayer factor={5.8} offset={1.9} speed={.4} style={{
-        backgroundImage: 'linear-gradient(to bottom right, #ffffff, #c2c0c0)',
-        // height: '120%'
-      }} />
-      <ParallaxLayer offset={1.9} speed={.4} style={{
-         width: '95%',
-         backgroundImage: `url(${code})`,
-        //  backgroundSize: 'auto 100%',
-         backgroundRepeat: 'no-repeat',
-         backgroundPosition: 'left top',
-        //  mixBlendMode: 'color-dodge',
-      }} />
+      {/*  >Md */}
+      <Hidden mdDown>
+          {/* APP background color */}
+          <ParallaxLayer factor={4.5} offset={2} speed={.4} style={{
+            backgroundImage: 'linear-gradient(to bottom right, #ffffff, #c2c0c0)',
+            // height: '120%'
+          }} />
+          <ParallaxLayer offset={2} speed={.4} style={{
+            width: '100%',
+            backgroundImage: `url(${code})`,
+            //  backgroundSize: 'auto 100%',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'left top',
+            //  mixBlendMode: 'color-dodge',
+          }} />
+      </Hidden>
+
+       {/* Md only */}
+      <Hidden only={['xs', 'lg', 'xl']}>
+          {/* APP background color */}
+          <ParallaxLayer factor={5.8} offset={1.9} speed={.4} style={{
+            backgroundImage: 'linear-gradient(to bottom right, #ffffff, #c2c0c0)',
+            // height: '120%'
+          }} />
+          <ParallaxLayer offset={1.9} speed={.4} style={{
+            width: '100%',
+            backgroundImage: `url(${code})`,
+            //  backgroundSize: 'auto 100%',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'left top',
+            //  mixBlendMode: 'color-dodge',
+          }} />
+      </Hidden>
 
       {/* ---------------AboutMeText ---------------- */}
       {/* AboutMeText XS only */}
       <Hidden smUp>
-        <ParallaxLayer offset={1.1} speed={.15}>
+        <ParallaxLayer offset={1.3} speed={.15}>
           <div style={{
             display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start', flexWrap: 'wrap', flexDirection: 'column'
           }} >

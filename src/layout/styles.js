@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     padding: 0,
+    width: '100vw'
   },
   parallax: {
     backgroundColor: 'black',
@@ -24,7 +25,9 @@ const useStyles = makeStyles({
     backgroundAttachment: 'fixed',
     backgroundPosition: 'right top',
     display: 'flex',
-    paddingRight: 30
+    // paddingRight: 30,
+    // overflow: 'scroll'
+
   },
   myName: {
     display: 'flex',
