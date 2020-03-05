@@ -23,20 +23,20 @@ const AboutMe = () => {
       {/* --------------- About me background ---------------- */}
         {/* XS only */}
       <Hidden smUp>
-        <ParallaxLayer offset={0.999} speed={.15} className={classes.aboutMeBackground} style={{ height: 1000 }} />
+        <ParallaxLayer factor={.5} offset={0.999} speed={.15} className={classes.aboutMeBackground} style={{ height: 1000 }} />
       </Hidden>
 
 
       {/* About me background */}
       {/* >Md */}
       <Hidden mdDown>
-        <ParallaxLayer offset={0.999} speed={.2} className={classes.aboutMeBackground} style={{ height: 1000 }} />
+        <ParallaxLayer factor={.5} offset={0.999} speed={.2} className={classes.aboutMeBackground} style={{ height: 1000 }} />
       </Hidden>
 
       {/* About me background */}
       {/* Md only */}
       <Hidden only={['xs', 'lg', 'xl']}>
-        <ParallaxLayer offset={0.999} speed={.2} className={classes.aboutMeBackground} style={{ height: 1000 }} />
+        <ParallaxLayer factor={.5} offset={0.999} speed={.2} className={classes.aboutMeBackground} style={{ height: 1000 }} />
       </Hidden>
 
       {/* --------------MyPic----------------- */}
@@ -46,12 +46,12 @@ const AboutMe = () => {
       {/* ---------------APP dev background ---------------- */}
 
       {/* APP background color */}
-      <ParallaxLayer offset={1.9} speed={.4} style={{
+      <ParallaxLayer factor={5.8} offset={1.9} speed={.4} style={{
         backgroundImage: 'linear-gradient(to bottom right, #ffffff, #c2c0c0)',
-        height: '120%'
+        // height: '120%'
       }} />
       <ParallaxLayer offset={1.9} speed={.4} style={{
-         width: '100%',
+         width: '95%',
          backgroundImage: `url(${code})`,
         //  backgroundSize: 'auto 100%',
          backgroundRepeat: 'no-repeat',
