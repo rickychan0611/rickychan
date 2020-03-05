@@ -163,7 +163,12 @@ const LayoutContainer = () => {
         {/* ---------------Graphic Design Title ---------------- */}
         {/* ---------------XS only ---------------- */}
         <Hidden smUp>
-          <ParallaxLayer factor={20} offset={14.5} speed={.2}
+          {/* APP background color */}
+          {/* <ParallaxLayer factor={10} offset={12} speed={4.5} style={{
+            backgroundImage: 'linear-gradient(to bottom right, #ffffff, transparent)',
+            // height: '100%'
+          }} /> */}
+          <ParallaxLayer factor={20} offset={10.5} speed={.2}
             style={{
               width: '85%',
               display: 'block',

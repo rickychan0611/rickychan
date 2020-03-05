@@ -50,8 +50,8 @@ const AboutMe = () => {
     {/* XS only */}
        <Hidden smUp>
           {/* APP background color */}
-          <ParallaxLayer factor={17} offset={2.1} speed={.5} style={{
-            // backgroundImage: 'linear-gradient(to bottom right, #ffffff, #ffffff)',
+          <ParallaxLayer factor={11.3} offset={2.1} speed={.5} style={{
+            backgroundImage: 'linear-gradient(to bottom right, #ffffff, #ffffff)',
             // height: '100%'
           }} />
           <ParallaxLayer  offset={2.1} speed={.5} style={{
