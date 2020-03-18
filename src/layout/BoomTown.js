@@ -13,11 +13,11 @@ import screenshot5 from '../images/boomtown5.png'
 import ModalPic from '../components/ModalPic'
 
 const scsreenshots = [
-  { src: screenshot1, width: 130 },
-  { src: screenshot2, width: 130 },
-  { src: screenshot3, width: 130 },
-  { src: screenshot4, width: 130 },
-  { src: screenshot5, width: 130 },
+  { src: screenshot1, width: 110 },
+  { src: screenshot2, width: 110 },
+  { src: screenshot3, width: 110 },
+  { src: screenshot4, width: 110 },
+  { src: screenshot5, width: 110 },
 ]
 
 const BoomTown = () => {
@@ -37,7 +37,7 @@ const BoomTown = () => {
         <Typography variant='h3' style={{ marginTop: 20 }}>
         Boom Town
       </Typography>
-        <Typography variant='body1' style={{ marginTop: 10,  }}>
+        <Typography variant='body2' style={{ marginTop: 10,  }}>
         Share, Borrow and Prosper. Boom Town is a full-stack website for sharing and borrowing different items. Users can upload an image, give it a description, choose appropriate tags and share it!
       </Typography>
 
@@ -69,7 +69,7 @@ const BoomTown = () => {
       {/* XS only */}
       <Hidden smUp>
       <Grid xs={12} md={6}>
-        <img src={BoomTownPic} style={{ height: 400, bottom: 0, marginLeft: -30 }} />
+        <img src={BoomTownPic} style={{ height: 300, bottom: 0, marginLeft: -30 }} />
       </Grid>
       </Hidden>
 
@@ -85,7 +85,7 @@ const BoomTown = () => {
       </Typography><div>
       {scsreenshots.map((item)=>{
         return (
-          <img src={item.src} style={{ objectFit: 'contain', width:item.width, margin:10}}
+          <img src={item.src} style={{ objectFit: 'contain', width:item.width, margin:5}}
             onClick={()=>{
               setOpenModal(true)
               setModalImg(item.src)

@@ -39,7 +39,7 @@ const Laviro = () => {
         <Typography variant='h3' style={{ marginTop: 20 }}>
         Laviro
       </Typography>
-        <Typography variant='body1' style={{ marginTop: 10,  }}>
+        <Typography variant='body2' style={{ marginTop: 10,  }}>
         Larivo Stories is an app that will act as a safe space for young people to share stories, find resources, and be part of a community fighting the stigma around mental health while improving their mental well being. 
         Users will be able to read, record, write and listen to stories from others’ personal experiences in the mental health space.
         Access to resources from partners in the community, relevant to the users (and the stories they come across). Wouldn't be replacing counselling.
@@ -74,7 +74,7 @@ const Laviro = () => {
       {/* XS only */}
       <Hidden smUp>
       <Grid xs={12} md={6}>
-        <img src={LaviroPic} style={{ height: 400, bottom: 0, marginLeft: -30 }} />
+        <img src={LaviroPic} style={{ height: 300, bottom: 0, marginLeft: -30 }} />
       </Grid>
       </Hidden>
 

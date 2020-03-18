@@ -3,9 +3,9 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
-import {ads} from './images'
-import {mgz} from './images'
-import {arts} from './images'
+import {ads} from './data'
+import {mgz} from './data'
+import {arts} from './data'
 
 const Graphics = () => {
   return (

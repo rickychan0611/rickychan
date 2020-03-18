@@ -13,11 +13,11 @@ import screenshot5 from '../images/amz5.png'
 import ModalPic from '../components/ModalPic'
 
 const scsreenshots = [
-  { src: screenshot1, width: 130 },
-  { src: screenshot2, width: 130 },
+  { src: screenshot1, width: 110 },
+  { src: screenshot2, width: 110 },
   { src: screenshot3, width: 50 },
-  { src: screenshot4, width: 130 },
-  { src: screenshot5, width: 130 }
+  { src: screenshot4, width: 110 },
+  { src: screenshot5, width: 110 }
 ]
 
 const AmzClub = () => {
@@ -37,7 +37,7 @@ const AmzClub = () => {
         <Typography variant='h3' style={{ marginTop: 20 }}>
         Amazon Club
       </Typography>
-        <Typography variant='body1' style={{ marginTop: 10,  }}>
+        <Typography variant='body2' style={{ marginTop: 10,  }}>
         Amazon Club is a platform connects Amazon's sellers and reviewers. It was launched to public in June 2019. Now has 500+ active members. Sellers can post their products and seek for reviewers who are interested in reviewing their products by offering discounts. Reviewers can also easily find products that are available for discount. They can manage their review submissions all in one place.      </Typography>
 
       <Box mt={2}>
@@ -66,7 +66,7 @@ const AmzClub = () => {
       {/* XS only */}
       <Hidden smUp>
       <Grid xs={12} md={6}>
-        <img src={AmzClubPic} style={{ height: 400, bottom: 0, marginLeft: -30 }} />
+        <img src={AmzClubPic} style={{ height: 300, bottom: 0, marginLeft: -30 }} />
       </Grid>
       </Hidden>
 
@@ -82,7 +82,7 @@ const AmzClub = () => {
       </Typography><div>
       {scsreenshots.map((item)=>{
         return (
-          <img src={item.src} style={{ objectFit: 'contain', width:item.width, margin:10}}
+          <img src={item.src} style={{ objectFit: 'contain', width:item.width, margin:5}}
             onClick={()=>{
               setOpenModal(true)
               setModalImg(item.src)

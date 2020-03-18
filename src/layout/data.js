@@ -56,12 +56,12 @@ export const ads = [
 ]
 
 export const mgz = [
-  { src: mz1 },
-  { src: mz2 },
-  { src: mz3 },
-  { src: mz4 },
-  { src: mz5 },
-  { src: mz6 },
+  { src: mz6, text: "I do magazine layout design"  },
+  { src: mz1, text: "I work with text and images on pages" },
+  { src: mz2, text: "ensuring that these elements are balanced, readable and beautiful" },
+  { src: mz3, text: "carefully consider composition and page elements"  },
+  { src: mz4, text: "styling different stories and contents"  },
+  { src: mz5, text: "create a clear flow of information for the reader"  },
 ]
 
 export const arts = [

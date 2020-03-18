@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import AboutMeText from '../components/AboutMeText'
 
 import { useSpring, animated } from 'react-spring'
 
@@ -18,16 +19,13 @@ const MyName = () => {
     maxWidth: 1020, }}>
 
       <Typography variant='h1'>
-        Hi, <br />I'm Ricky<span style={{ color: 'red' }}>.</span>
+        About<br />Me<span style={{ color: 'red' }}>.</span>
       </Typography>
-      <Box mt={3}>
-        <Typography variant='h3'>
-          Full Stack Developer & <br />Grahpic Designer
+      <Box mt={3} style={{ maxWidth: 550 }}>
+        <Typography variant='body-1'>
+        <AboutMeText />
       </Typography>
       </Box>
-      <Typography variant='overline'>
-        from physical to digital @ Vancouver
-      </Typography>
 
     </div>
   )

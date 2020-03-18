@@ -1,16 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles';
-import background from '../images/background.png'
-import building from '../images/building.png'
-import buildingBW from '../images/building-BW.png'
-import bokeh1 from '../images/bokeh1.png'
-import bokeh2 from '../images/bokeh2.png'
-import ricky from '../images/ricky.png'
-import restApp from '../images/restApp.png'
-
-import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import background from '../../images/background.png'
+import building from '../../images/building.png'
+import buildingBW from '../../images/building-BW.png'
+import bokeh1 from '../../images/bokeh1.png'
 
 const useStyles = makeStyles({
   root: {

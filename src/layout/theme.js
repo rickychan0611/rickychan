@@ -5,8 +5,8 @@ theme = responsiveFontSizes(theme)
 theme.typography.h1 = {
   fontSize: '6rem',
   lineHeight: '80%',
-  '@media (min-width:330px)': {
-    fontSize: '7rem',
+  '@media (min-width:420px)': {
+    fontSize: '6rem',
   },
   '@media (min-width:800px)': {
     fontSize: '8rem',

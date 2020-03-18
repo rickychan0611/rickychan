@@ -31,8 +31,8 @@ const AboutMe = () => {
       {/* About me background */}
       {/* >Md */}
       <Hidden mdDown>
-        <ParallaxLayer factor={.5} offset={0.999} speed={.2} className={classes.aboutMeBackground} 
-        style={{ height: 1000 }} />
+        <ParallaxLayer factor={1} offset={1} speed={.2} className={classes.aboutMeBackground} 
+        />
       </Hidden>
 
       {/* About me background */}

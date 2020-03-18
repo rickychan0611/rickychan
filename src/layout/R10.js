@@ -68,7 +68,7 @@ const R10 = () => {
       {/* XS only */}
       <Hidden smUp>
       <Grid xs={12} md={6}>
-        <img src={R10Pic} style={{ height: 400, bottom: 0, marginLeft: -30 }} />
+        <img src={R10Pic} style={{ height: 300, bottom: 0, marginLeft: -30 }} />
       </Grid>
       </Hidden>
 
@@ -84,7 +84,7 @@ const R10 = () => {
       </Typography><div>
       {scsreenshots.map((item)=>{
         return (
-          <img src={item.src} style={{ objectFit: 'contain', width:item.width, margin:10}}
+          <img src={item.src} style={{ objectFit: 'contain', width:item.width, margin:5}}
             onClick={()=>{
               setOpenModal(true)
               setModalImg(item.src)
