@@ -2,15 +2,24 @@
 import ad1 from '../images/ad/ad1.jpg'
 import ad2 from '../images/ad/ad2.jpg'
 import ad3 from '../images/ad/ad3.jpg'
-import ad5 from '../images/ad/ad5.jpg'
-import ad6 from '../images/ad/ad6.jpg'
-import ad7 from '../images/ad/ad7.jpg'
-import ad8 from '../images/ad/ad8.jpg'
-import ad9 from '../images/ad/ad9.jpg'
-import ad10 from '../images/ad/ad10.jpg'
-import ad11 from '../images/ad/ad11.jpg'
-import ad12 from '../images/ad/ad12.jpg'
-import ad13 from '../images/ad/ad13.jpg'
+import ad4 from '../images/ad/ad4.JPG'
+import ad5 from '../images/ad/ad5.JPG'
+import ad6 from '../images/ad/ad6.JPG'
+import ad7 from '../images/ad/ad7.JPG'
+import ad14 from '../images/ad/ad8.JPG'
+import ad15 from '../images/ad/ad9.JPG'
+import ad16 from '../images/ad/ad10.JPG'
+import ad11 from '../images/ad/ad11.JPG'
+import ad12 from '../images/ad/ad12.JPG'
+import ad13 from '../images/ad/ad13.JPG'
+import ad8 from '../images/ad/2012-cover.jpg'
+import ad9 from '../images/ad/2015-cover.jpg'
+import ad10 from '../images/ad/2019-cover.JPG'
+import ad17 from '../images/ad/ad17.JPG'
+import ad18 from '../images/ad/ad18.JPG'
+import ad19 from '../images/ad/ad19.JPG'
+
+
 
 import mz1 from '../images/ad/mz1.jpg'
 import mz2 from '../images/ad/mz2.jpg'
@@ -41,18 +50,24 @@ import art19 from '../images/art/art19.jpg'
 
 
 export const ads = [
-  { src: ad1 },
-  { src: ad2 },
-  { src: ad3 },
-  { src: ad5 },
-  { src: ad6 },
-  { src: ad7 },
+  { src: ad1, text: "I do magazine layout design" },
+  { src: ad2, text: "I do magazine layout design" },
+  { src: ad3, text: "I do magazine layout design" },
+  { src: ad5, text: "I do magazine layout design" },
+  { src: ad6, text: "I do magazine layout design" },
+  { src: ad7, text: "I do magazine layout design" },
   { src: ad8 },
   { src: ad9 },
   { src: ad10 },
   { src: ad11 },
   { src: ad12 },
   { src: ad13 },
+  { src: ad14 },
+  { src: ad15 },
+  { src: ad16 },
+  { src: ad17 },
+  { src: ad18 },
+  { src: ad19 }
 ]
 
 export const mgz = [

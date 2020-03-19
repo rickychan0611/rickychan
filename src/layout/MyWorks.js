@@ -66,12 +66,14 @@ const MyWorks = () => {
           </Typography>
         </div>
       </Link>
+      <Link to="/ads" style={{ color: 'inherit', textDecoration: 'inherit' }}>
         <div 
           className={classes.button}>
           <Typography variant='h4'>
             Print Ads Design
           </Typography>
         </div>
+        </Link>
       </Box>
 
     </div>
