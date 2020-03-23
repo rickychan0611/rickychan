@@ -6,13 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom"
-
-import { useSpring, animated } from 'react-spring'
-
-import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -53,7 +47,7 @@ const MyWorks = () => {
       <Link to="/app-dev" style={{ color: 'inherit', textDecoration: 'inherit' }}>
         <div 
           className={classes.button}>
-          <Typography variant='h4'>
+          <Typography variant='h5'>
             App Development
           </Typography>
         </div>
@@ -61,7 +55,7 @@ const MyWorks = () => {
       <Link to="/magazine" style={{ color: 'inherit', textDecoration: 'inherit' }}>
         <div 
           className={classes.button}>
-          <Typography variant='h4'>
+          <Typography variant='h5'>
             Magazine Design
           </Typography>
         </div>
@@ -69,13 +63,20 @@ const MyWorks = () => {
       <Link to="/ads" style={{ color: 'inherit', textDecoration: 'inherit' }}>
         <div 
           className={classes.button}>
-          <Typography variant='h4'>
+          <Typography variant='h5'>
             Print Ads Design
           </Typography>
         </div>
         </Link>
+        <Link to="/menu" style={{ color: 'inherit', textDecoration: 'inherit' }}>
+        <div 
+          className={classes.button}>
+          <Typography variant='h5'>
+            Restaurant Menus
+          </Typography>
+        </div>
+        </Link>
       </Box>
-
     </div>
   )
 }

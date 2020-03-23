@@ -50,24 +50,21 @@ import art19 from '../images/art/art19.jpg'
 
 
 export const ads = [
-  { src: ad1, text: "I do magazine layout design" },
-  { src: ad2, text: "I do magazine layout design" },
-  { src: ad3, text: "I do magazine layout design" },
-  { src: ad5, text: "I do magazine layout design" },
-  { src: ad6, text: "I do magazine layout design" },
-  { src: ad7, text: "I do magazine layout design" },
-  { src: ad8 },
-  { src: ad9 },
-  { src: ad10 },
-  { src: ad11 },
-  { src: ad12 },
-  { src: ad13 },
-  { src: ad14 },
-  { src: ad15 },
-  { src: ad16 },
-  { src: ad17 },
-  { src: ad18 },
-  { src: ad19 }
+  { src: ad1, text: "I create eye-catching advertisements for newspapers and magazines" },
+  { src: ad2, text: "I've been working with clients from many different industries" },
+  { src: ad3, text: "I understand differnet styles and look from the point of view of my clients" },
+  { src: ad5, text: "convey the clients' desired message to their customers" },
+  { src: ad6, text: "create designs that are artistically interesting and appealing" },
+  { src: ad7, text: "Graphic design is a form of communication"},
+  { src: ad10, text: "You can easily understand the message behind it even without knowing the language" },
+  { src: ad11, text: "I am interested in understanding people" },
+  { src: ad12, text: "and what their needs are"},
+  { src: ad13, text: "The audience is often more willing to pay attention to a message if it “looks” interesting" },
+  { src: ad14, text: "Design adds value faster than it adds costs"},
+  { src: ad15, text: "Good design is a language"},
+  { src: ad16, text: "to make people feel good" },
+  { src: ad17, text: "my job is to create the desire" },
+  { src: ad18, text: "to create the need that they will buy the service or product" }
 ]
 
 export const mgz = [

@@ -6,7 +6,10 @@ import magBg from '../../images/mag-bg2.png'
 import { mgz } from '../../layout/data'
 import Hidden from '@material-ui/core/Hidden';
 
-
+function getRandomColor() {
+  let color = "hsl(" + Math.random() * 360 + ", 90%, 95%)";
+  return color;
+}
 
 const Mag = ({ parallax }) => {
 
@@ -38,25 +41,16 @@ const Mag = ({ parallax }) => {
             height: 2000,
           }}
         />
-        <ParallaxLayer offset={0.5} speed={2} factor={4}
+        {mgz.map((item, i)=>{
+          return (
+          <ParallaxLayer offset={i } speed={2} factor={4}
           style={{
-            backgroundImage: 'linear-gradient(transparent, #b3edfc, #ffefcc, transparent)',
+            backgroundImage: 'linear-gradient(transparent, ' + getRandomColor() +','+ getRandomColor() + ', transparent)',
             height: 5000,
           }}
         />
-
-        <ParallaxLayer offset={2.5 + (initPages / 5)} speed={2}
-          style={{
-            backgroundImage: 'linear-gradient(transparent, #fbfce1, #def7dc, transparent)',
-            height: 1000,
-          }}
-        />
-        <ParallaxLayer offset={3.5 + (initPages / 5)} speed={2}
-          style={{
-            backgroundImage: 'linear-gradient(transparent, #d7fbfc, #e3ffe0, transparent)',
-            height: 5000,
-          }}
-        />
+        )
+        })}
 
         {/* Title */}
         <ParallaxLayer

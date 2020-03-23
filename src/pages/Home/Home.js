@@ -1,5 +1,4 @@
-import React, { Fragment } from 'react'
-import LayoutContainer from '../../layout/LayoutContainer'
+import React from 'react'
 import buildingBW from '../../images/building-BW.png'
 import bokeh1 from '../../images/bokeh1.png'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
@@ -7,7 +6,6 @@ import useStyles from './styles'
 import MyName from '../../layout/MyName'
 import MyWorks from '../../layout/MyWorks'
 import AboutMe2 from '../../layout/AboutMe2'
-import MyPic from '../../layout/MyPic'
 import ricky from '../../images/ricky.png'
 
 const Home = () => {
@@ -55,7 +53,6 @@ const Home = () => {
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'right top',
             mixBlendMode: 'color-dodge',
-            // paddingLeft: 25
           }}>
         </ParallaxLayer>
 

@@ -93,16 +93,7 @@ const AppDev = () => {
 
   return (
     <div >
-      {/* <div> */}
-      {/* {initPages}<br></br> */}
-      {/* </div> */}
-      {/* {height1}<br></br>
-      {height2}<br></br>
-      {height3}<br></br>
-      {height4}<br></br>
-      {height5}<br></br>
-      {screenSize.height} */}
-      {/* backgounrd */}
+      
       <Parallax pages={initPages}>
 
         <ParallaxLayer offset={1} speed={-2}
@@ -247,7 +238,7 @@ const AppDev = () => {
             paddingRight: '10%',
             display: 'flex', alignItems: 'flex-end', justifyContent: 'center'
           }}        >
-          <div ref={divHeight5} style={{ width: '85vw', marginBottom: 30 }}>
+          <div ref={divHeight5} style={{ width: '85vw', marginBottom: 150 }}>
             <Laviro />
           </div>
         </ParallaxLayer>
