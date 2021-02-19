@@ -5,9 +5,10 @@ import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 import letMeOrderPic from '../images/letMeOrder.png'
-import screenshot1 from '../images/selforder1.png'
-import screenshot2 from '../images/selforder2.png'
-import screenshot3 from '../images/selforder3.png'
+import tintin from '../images/tintin.png'
+import screenshot1 from '../images/sub4sub1.png'
+import screenshot2 from '../images/sub4sub2.png'
+import screenshot3 from '../images/sub4sub3.png'
 import screenshot4 from '../images/selforder4.png'
 import screenshot5 from '../images/selforder5.png'
 import screenshot6 from '../images/selforder6.png'
@@ -39,36 +40,29 @@ const LetMeOrder = () => {
 
       <Grid xs={12} md={6}>
         <Typography variant='h3' style={{ marginTop: 20 }}>
-          LetMe Order
+          Tin Tin Food Wholesale E-shop
       </Typography>
         <Typography variant='body2' style={{ marginTop: 10, }}>
-          LetMe Order is a restaurant self ordering system that allows customers to order their food together (not alone)! I have already convinced 2 Restaurants to use the app. This app aims for restaurants that serve many items for a table, such as Chinese dim sum restaurants, Japanese sushi restaurants, and hotpot restaurants etc. The system has a very low setup cost and it allows every customer at the same table to place orders together from their own mobile phones. Customers can see updates in real-time and in-app services request functions. It also comes with kitchen side interface and control panel to manage orders and items.
-      </Typography>
+          Tin Tin Food Wholesale E-shop is an e-commerce platform that was built using React Native Web. It is available for Web, Android, and IOS which saves a lot of development time and cost. The app offers a great shopping experience to customers as well as great features for the seller. It also features a membership QR code scanning system and best route generator for delivery drivers.      </Typography>
 
         <Box mt={2}>
           <Typography variant='h6' style={{ marginTop: 10 }}>
             Technologies:
           </Typography>
-          <Typography variant='body1' style={{ marginTop: 10 }}>React + MeteorJS + MongoDB + Samentic UI
+          <Typography variant='body1' style={{ marginTop: 10 }}>React Native Web + Nextjs + FireStore + React Native Paper
       </Typography>
         </Box>
 
         <Box mt={2}>
           <Button variant="outlined" color="primary" style={{ marginRight: 20, marginTop: 20 }}
-            onClick={() => window.open("http://letme-order.meteorapp.com/", "_blank")}
+            onClick={() => window.open("https://tintinfood.ca", "_blank")}
           >
-            Customer demo
-        </Button>
-
-          <Button variant="outlined" color="primary" style={{ marginRight: 20, marginTop: 20 }}
-            onClick={() => window.open("http://letme-order.meteorapp.com/menu-control", "_blank")}
-          >
-            Admin demo
+            View demo
         </Button>
 
           <Button startIcon={<i class="fa fa-github" aria-hidden="true" />}
             style={{ marginRight: 20, marginTop: 20 }}
-            onClick={() => window.open("https://github.com/fyeung21/self-order", "_blank")}
+            onClick={() => window.open("https://github.com/rickychan0611/nexpo-nav", "_blank")}
           >
             Source code
           </Button>
@@ -77,20 +71,21 @@ const LetMeOrder = () => {
       {/* XS only */}
       <Hidden smUp>
         <Grid xs={12} md={6}>
-          <img src={letMeOrderPic} style={{ height: 300, bottom: 0, marginLeft: -30 }} />
+          <img src={tintin} style={{ height: 300, bottom: 0, marginLeft: -30 }} />
         </Grid>
       </Hidden>
 
       {/* >XS */}
       <Hidden xsDown>
         <Grid xs={12} md={6}>
-          <img src={letMeOrderPic} style={{ height: 450, bottom: 0 }} />
+          <img src={tintin} style={{ height: 450, bottom: 0 }} />
         </Grid>
       </Hidden>
 
-      <Typography variant='h6' style={{ marginTop: 10 }}>
+      {/* <Typography variant='h6' style={{ marginTop: 10 }}>
         Screenshots:
-      </Typography><div>
+      </Typography>
+      <div>
         {scsreenshots.map((item) => {
           return (
             <img src={item.src} style={{ objectFit: 'contain', width: item.width, margin: 5 }}
@@ -100,7 +95,7 @@ const LetMeOrder = () => {
               }} />
           )
         })}
-      </div>
+      </div> */}
 
     </Grid>
   )

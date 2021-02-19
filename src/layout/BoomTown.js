@@ -21,77 +21,77 @@ const scsreenshots = [
 ]
 
 const BoomTown = () => {
-    const [openModal, setOpenModal] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
 
-    const handleClose = () => {
-      setOpenModal(false);
-    };
+  const handleClose = () => {
+    setOpenModal(false);
+  };
 
-    const [modalImg, setModalImg] = useState('')
+  const [modalImg, setModalImg] = useState('')
 
-    return (
-      <Grid container mr={2}>
-              <ModalPic open={openModal} close={handleClose} modalImg={modalImg}/>
+  return (
+    <Grid container mr={2}>
+      <ModalPic open={openModal} close={handleClose} modalImg={modalImg} />
 
       <Grid xs={12} md={6}>
         <Typography variant='h3' style={{ marginTop: 20 }}>
-        Boom Town
+          Boom Town
       </Typography>
-        <Typography variant='body2' style={{ marginTop: 10,  }}>
-        Share, Borrow and Prosper. Boom Town is a full-stack website for sharing and borrowing different items. Users can upload an image, give it a description, choose appropriate tags and share it!
+        <Typography variant='body2' style={{ marginTop: 10, }}>
+          Share, Borrow and Prosper. Boom Town is a full-stack website for sharing and borrowing different items. Users can upload an image, give it a description, choose appropriate tags and share it!
       </Typography>
 
 
-      <Box mt={2}>
-        <Typography variant='h6' style={{ marginTop: 10 }}>
-          Technologies:
+        <Box mt={2}>
+          <Typography variant='h6' style={{ marginTop: 10 }}>
+            Technologies:
           </Typography>
-        <Typography variant='body1' style={{ marginTop: 10 }}>
-        React + Express + GraphQL/Apollo + PostgresSQL + Material UI
+          <Typography variant='body1' style={{ marginTop: 10 }}>
+            React + Node.js + Apollo Express + PostgresSQL + Material UI
     </Typography>
-      </Box>
+        </Box>
 
-      <Box mt={2}>
-        <Button variant="outlined" color="primary"  style={{marginRight: 20, marginTop: 20}}
-          onClick={()=> window.open("https://boom.academy.red/", "_blank")}
+        <Box mt={2}>
+          <Button variant="outlined" color="primary" disabled style={{ marginRight: 20, marginTop: 20 }}
+            onClick={() => window.open("https://boom.academy.red/", "_blank")}
           >
-          Live View
+            Project is offline
         </Button>
 
-       <Button startIcon={<i class="fa fa-github" aria-hidden="true" />} 
-        style={{marginRight: 20, marginTop: 20}}
-        onClick={()=> window.open("https://github.com/rickychan0611/Boomtown-final", "_blank")}
-        >
-          Source code
+          <Button startIcon={<i class="fa fa-github" aria-hidden="true" />}
+            style={{ marginRight: 20, marginTop: 20 }}
+            onClick={() => window.open("https://github.com/rickychan0611/Boomtown-final", "_blank")}
+          >
+            Source code
           </Button>
         </Box>
       </Grid>
       {/* XS only */}
       <Hidden smUp>
-      <Grid xs={12} md={6}>
-        <img src={BoomTownPic} style={{ height: 300, bottom: 0, marginLeft: -30 }} />
-      </Grid>
+        <Grid xs={12} md={6}>
+          <img src={BoomTownPic} style={{ height: 300, bottom: 0, marginLeft: -30 }} />
+        </Grid>
       </Hidden>
 
       {/* >XS */}
       <Hidden xsDown>
-      <Grid xs={12} md={6}>
-        <img src={BoomTownPic} style={{ height: 450, bottom: 0 }} />
-      </Grid>
+        <Grid xs={12} md={6}>
+          <img src={BoomTownPic} style={{ height: 450, bottom: 0 }} />
+        </Grid>
       </Hidden>
 
       <Typography variant='h6' style={{ marginTop: 10 }}>
-          Screenshots:
+        Screenshots:
       </Typography><div>
-      {scsreenshots.map((item)=>{
-        return (
-          <img src={item.src} style={{ objectFit: 'contain', width:item.width, margin:5}}
-            onClick={()=>{
-              setOpenModal(true)
-              setModalImg(item.src)
-            }}/>
-        )
-      })}
+        {scsreenshots.map((item) => {
+          return (
+            <img src={item.src} style={{ objectFit: 'contain', width: item.width, margin: 5 }}
+              onClick={() => {
+                setOpenModal(true)
+                setModalImg(item.src)
+              }} />
+          )
+        })}
       </div>
 
     </Grid>

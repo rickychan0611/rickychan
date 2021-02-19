@@ -4,25 +4,19 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
-import LaviroPic from '../images/Larivo.png'
-import screenshot1 from '../images/r10-1.png'
-import screenshot2 from '../images/r10-2.png'
-import screenshot3 from '../images/r10-3.png'
-import screenshot4 from '../images/r10-4.png'
-import screenshot5 from '../images/r10-5.png'
-import screenshot6 from '../images/r10-6.png'
+import BoomTownPic from '../images/sub4sub-mon.png'
+import screenshot1 from '../images/sub4sub1.png'
+import screenshot2 from '../images/sub4sub2.png'
+import screenshot3 from '../images/sub4sub3.png'
 import ModalPic from '../components/ModalPic'
 
 const scsreenshots = [
-  { src: screenshot1, width: 50 },
-  { src: screenshot2, width: 50 },
-  { src: screenshot3, width: 50 },
-  { src: screenshot4, width: 50 },
-  { src: screenshot5, width: 50 },
-  { src: screenshot6, width: 50 },
+  { src: screenshot1, width: 110 },
+  { src: screenshot2, width: 110 },
+  { src: screenshot3, width: 110 }
 ]
 
-const Laviro = () => {
+const Sub4Sub = () => {
   const [openModal, setOpenModal] = useState(false)
 
   const handleClose = () => {
@@ -37,13 +31,11 @@ const Laviro = () => {
 
       <Grid xs={12} md={6}>
         <Typography variant='h3' style={{ marginTop: 20 }}>
-          Laviro
+          Youtube Auto Sub4Sub
       </Typography>
         <Typography variant='body2' style={{ marginTop: 10, }}>
-          Larivo Stories is an app that will act as a safe space for young people to share stories, find resources, and be part of a community fighting the stigma around mental health while improving their mental well being.
-          Users will be able to read, record, write and listen to stories from others’ personal experiences in the mental health space.
-          Access to resources from partners in the community, relevant to the users (and the stories they come across). Wouldn't be replacing counselling.
-</Typography>
+          Auto Sub4Sub is a Youtube automatic subscription system that users can play each other's videos and subscribe to their Youtube channels automatically. This is a hobby project. I wanted to try to use Javascript to build a desktop app using ElectronJS.
+          </Typography>
 
 
         <Box mt={2}>
@@ -51,18 +43,20 @@ const Laviro = () => {
             Technologies:
           </Typography>
           <Typography variant='body1' style={{ marginTop: 10 }}>
-            React-Native + Prisma + GraphQL
+            React + ElectronJS
     </Typography>
         </Box>
+
         <Box mt={2}>
           <Button variant="outlined" color="primary" style={{ marginRight: 20, marginTop: 20 }}
-            onClick={() => window.open("https://larivo.ca/about", "_blank")}
+            onClick={() => window.open("https://youtu.be/BD2wkFtTfH8", "_blank")}
           >
-            Larivo Website
+            Video Demo
         </Button>
+
           <Button startIcon={<i class="fa fa-github" aria-hidden="true" />}
             style={{ marginRight: 20, marginTop: 20 }}
-            onClick={() => window.open("https://github.com/redacademy/larivo-WS2-2019", "_blank")}
+            onClick={() => window.open("https://github.com/rickychan0611/sub-4-sub", "_blank")}
           >
             Source code
           </Button>
@@ -71,18 +65,32 @@ const Laviro = () => {
       {/* XS only */}
       <Hidden smUp>
         <Grid xs={12} md={6}>
-          <img src={LaviroPic} style={{ height: 300, bottom: 0, marginLeft: -30 }} />
+          <img src={BoomTownPic} style={{ height: 300, bottom: 0, marginLeft: -10 }} />
         </Grid>
       </Hidden>
 
       {/* >XS */}
       <Hidden xsDown>
         <Grid xs={12} md={6}>
-          <img src={LaviroPic} style={{ height: 450, bottom: 0 }} />
+          <img src={BoomTownPic} style={{ height: 450, bottom: 0 }} />
         </Grid>
       </Hidden>
+
+      <Typography variant='h6' style={{ marginTop: 10 }}>
+        Screenshots:
+      </Typography><div>
+        {scsreenshots.map((item) => {
+          return (
+            <img src={item.src} style={{ objectFit: 'contain', width: item.width, margin: 5 }}
+              onClick={() => {
+                setOpenModal(true)
+                setModalImg(item.src)
+              }} />
+          )
+        })}
+      </div>
 
     </Grid>
   )
 }
-export default Laviro
+export default Sub4Sub

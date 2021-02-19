@@ -14,21 +14,15 @@ import AmzClub from '../../layout/AmzClub'
 import BoomTown from '../../layout/BoomTown'
 import R10 from '../../layout/R10'
 import Laviro from '../../layout/Laviro'
+import TinTin from '../../layout/TinTin'
+import Sub4Sub from '../../layout/Sub4Sub'
+import AlphaPay from '../../layout/AlphaPay'
 
-let initPages = 6
+let initPages = window.innerWidth > 950 ? 5.8 : 7.5
 
 const AppDev = () => {
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 })
   const [height1, setHeight1] = useState(0)
-  const [height2, setHeight2] = useState(0)
-  const [height3, setHeight3] = useState(0)
-  const [height4, setHeight4] = useState(0)
-  const [height5, setHeight5] = useState(0)
-  const [totalHeight, setTotalHeight] = useState(0)
-  const [pages, setPages] = useState(0)
-
-
-  const ref = useRef(null)
 
   useEffect(() => {
     setScreenSize({ width: window.innerWidth, height: window.innerHeight });
@@ -40,60 +34,10 @@ const AppDev = () => {
     initPages = initPages + (screenSize.height / height1)
     factor1 = screenSize.height / height1
   }
-  let factor2 = 1
-  if (screenSize.height < height2) {
-    initPages = initPages + (screenSize.height / height2)
-    factor2 = 2
-  }
-  let factor3 = 1
-  if (screenSize.height < height3) {
-    initPages = initPages + (screenSize.height / height3)
-    factor3 = 2
-  }
-  let factor4 = 1
-  if (screenSize.height < height4) {
-    initPages = initPages + (screenSize.height / height4)
-    factor4 = 2
-  }
-  let factor5 = 1
-  if (screenSize.height < height5) {
-    initPages = initPages + (screenSize.height / height5)
-    factor5 = 2
-  }
-
-  const divHeight1 = useCallback(node => {
-    if (node !== null) {
-      setHeight1(node.getBoundingClientRect().height);
-    }
-  }, []);
-
-  const divHeight2 = useCallback(node => {
-    if (node !== null) {
-      setHeight2(node.getBoundingClientRect().height);
-    }
-  }, []);
-
-  const divHeight3 = useCallback(node => {
-    if (node !== null) {
-      setHeight3(node.getBoundingClientRect().height);
-    }
-  }, []);
-
-  const divHeight4 = useCallback(node => {
-    if (node !== null) {
-      setHeight4(node.getBoundingClientRect().height);
-    }
-  }, []);
-
-  const divHeight5 = useCallback(node => {
-    if (node !== null) {
-      setHeight5(node.getBoundingClientRect().height);
-    }
-  }, []);
 
   return (
     <div >
-      
+
       <Parallax pages={initPages}>
 
         <ParallaxLayer offset={1} speed={-2}
@@ -122,9 +66,16 @@ const AppDev = () => {
             height: 1000,
           }}
         />
-        <ParallaxLayer offset={4 + (initPages / 5)} speed={-1}
+        <ParallaxLayer offset={4 + (initPages / 5)} speed={1}
           style={{
             backgroundImage: 'linear-gradient(transparent, #fcedfc, #d2f5fa, transparent)',
+            height: 2000,
+          }}
+        />
+
+        <ParallaxLayer offset={6 + (initPages / 5)} speed={-.5}
+          style={{
+            backgroundImage: 'linear-gradient(transparent, #ffefcc, #fcedfc, #d2f5fa, transparent, #b3edfc)',
             height: 2000,
           }}
         />
@@ -145,20 +96,20 @@ const AppDev = () => {
           style={{ paddingLeft: '5%', paddingRight: '5%' }}
         >
           <Hidden smDown>
-          <Box >
-            <Typography variant='h1' style={{ marginTop: '60vh' }}>
-              App Dev<span style={{ color: 'red' }}>.</span>
-            </Typography>
-          </Box>
-        </Hidden>
+            <Box >
+              <Typography variant='h1' style={{ marginTop: '60vh' }}>
+                App Dev<span style={{ color: 'red' }}>.</span>
+              </Typography>
+            </Box>
+          </Hidden>
 
-        <Hidden mdUp>
-          <Box >
-            <Typography variant='h1' style={{ marginTop: '70vh' }}>
-              App<span style={{ color: 'red' }}>.</span><br />
+          <Hidden mdUp>
+            <Box >
+              <Typography variant='h1' style={{ marginTop: '70vh' }}>
+                App<span style={{ color: 'red' }}>.</span><br />
               Dev
             </Typography>
-          </Box>
+            </Box>
           </Hidden>
 
           <Box mt={8} mb={20}>
@@ -168,6 +119,7 @@ const AppDev = () => {
             </Typography>
           </Box>
         </ParallaxLayer>
+
         {/* 1-------------------------------------------- */}
         <ParallaxLayer
           factor={factor1}
@@ -178,76 +130,35 @@ const AppDev = () => {
             alignItems: 'center'
           }}
         >
-          <div ref={divHeight1}>
+          <div style={{ marginBottom: 250 }}>
+            <TinTin />
+          </div>
+          <div style={{ marginBottom: 250 }}>
             <LetMeOrder />
           </div>
-        </ParallaxLayer>
-
-        {/* 2-------------------------------------------- */}
-
-        <ParallaxLayer
-          factor={factor2}
-          offset={1 + (initPages / 5)}
-          speed={1}
-          style={{
-            paddingLeft: '5%', paddingRight: '5%', width: '85%',
-            alignItems: 'center'
-          }}        >
-          <div ref={divHeight2}>
+          <div style={{ marginBottom: 250 }}>
             <AmzClub />
           </div>
-        </ParallaxLayer>
-
-        {/* 3-------------------------------------------- */}
-
-        <ParallaxLayer
-          factor={factor3}
-          offset={2 + (initPages / 5)}
-          speed={1}
-          style={{
-            paddingLeft: '5%', paddingRight: '5%', width: '85%',
-            alignItems: 'center'
-          }}        >
-          <div ref={divHeight3}>
+          <div style={{ marginBottom: 250 }}>
+            <AlphaPay />
+          </div>
+          <div style={{ marginBottom: 250 }}>
+            <Laviro />
+          </div>
+          <div style={{ marginBottom: 250 }}>
+            <Sub4Sub />
+          </div>
+          <div style={{ marginBottom: 250 }}>
             <BoomTown />
           </div>
-        </ParallaxLayer>
-
-        {/* 4-------------------------------------------- */}
-
-        <ParallaxLayer
-          factor={factor4}
-          offset={initPages - 2}
-          speed={1}
-          style={{
-            paddingLeft: '5%', paddingRight: '5%',
-            alignItems: 'center'
-          }}        >
-          <div ref={divHeight4}>
+          <div style={{ marginBottom: 250 }}>
             <R10 />
           </div>
         </ParallaxLayer>
 
-        {/* 5-------------------------------------------- */}
-
-        <ParallaxLayer
-          factor={factor5}
-          offset={initPages - .99}
-          speed={1}
-          style={{
-            paddingRight: '10%',
-            display: 'flex', alignItems: 'flex-end', justifyContent: 'center'
-          }}        >
-          <div ref={divHeight5} style={{ width: '85vw', marginBottom: 150 }}>
-            <Laviro />
-          </div>
-        </ParallaxLayer>
-
-        {/* </div> */}
-
       </Parallax>
 
-    </div>
+    </div >
   )
 }
 
