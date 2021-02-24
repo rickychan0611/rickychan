@@ -17,8 +17,9 @@ import Laviro from '../../layout/Laviro'
 import TinTin from '../../layout/TinTin'
 import Sub4Sub from '../../layout/Sub4Sub'
 import AlphaPay from '../../layout/AlphaPay'
+import UrbanFavor from '../../layout/UrbanFavor'
 
-let initPages = window.innerWidth > 950 ? 5.8 : 7.5
+let initPages = window.innerWidth > 950 ? 6 : 9.5
 
 const AppDev = () => {
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 })
@@ -130,28 +131,31 @@ const AppDev = () => {
             alignItems: 'center'
           }}
         >
-          <div style={{ marginBottom: 250 }}>
+          <div style={{ marginBottom: 350 }}>
             <TinTin />
           </div>
-          <div style={{ marginBottom: 250 }}>
+          <div style={{ marginBottom: 350 }}>
             <LetMeOrder />
           </div>
-          <div style={{ marginBottom: 250 }}>
+          <div style={{ marginBottom: 350 }}>
             <AmzClub />
           </div>
-          <div style={{ marginBottom: 250 }}>
+          <div style={{ marginBottom: 350 }}>
+            <UrbanFavor />
+          </div>
+          <div style={{ marginBottom: 350 }}>
             <AlphaPay />
           </div>
-          <div style={{ marginBottom: 250 }}>
+          <div style={{ marginBottom: 350 }}>
             <Laviro />
           </div>
-          <div style={{ marginBottom: 250 }}>
+          <div style={{ marginBottom: 350 }}>
             <Sub4Sub />
           </div>
-          <div style={{ marginBottom: 250 }}>
+          <div style={{ marginBottom: 350 }}>
             <BoomTown />
           </div>
-          <div style={{ marginBottom: 250 }}>
+          <div style={{ marginBottom: 350 }}>
             <R10 />
           </div>
         </ParallaxLayer>
