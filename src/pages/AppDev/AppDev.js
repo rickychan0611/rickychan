@@ -18,8 +18,10 @@ import TinTin from '../../layout/TinTin'
 import Sub4Sub from '../../layout/Sub4Sub'
 import AlphaPay from '../../layout/AlphaPay'
 import UrbanFavor from '../../layout/UrbanFavor'
+import PeacefulRest from "../../layout/PeacefulRest";
+import PeacefulMall from "../../layout/PeacefulMall";
 
-let initPages = window.innerWidth > 950 ? 6 : 9.5
+let initPages = window.innerWidth > 950 ? 10 : 10
 
 const AppDev = () => {
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 })
@@ -41,6 +43,18 @@ const AppDev = () => {
 
       <Parallax pages={initPages}>
 
+        <ParallaxLayer offset={1} speed={-2}
+          style={{
+            backgroundImage: 'linear-gradient(transparent, #d7faf1, #e5e3ff, transparent)',
+            height: 1000,
+          }}
+        />
+        <ParallaxLayer offset={1} speed={-2}
+          style={{
+            backgroundImage: 'linear-gradient(transparent, #d7faf1, #e5e3ff, transparent)',
+            height: 1000,
+          }}
+        />
         <ParallaxLayer offset={1} speed={-2}
           style={{
             backgroundImage: 'linear-gradient(transparent, #d7faf1, #e5e3ff, transparent)',
@@ -131,6 +145,12 @@ const AppDev = () => {
             alignItems: 'center'
           }}
         >
+          <div style={{ marginBottom: 350 }}>
+            <PeacefulMall />
+          </div>
+          <div style={{ marginBottom: 350 }}>
+            <PeacefulRest />
+          </div>
           <div style={{ marginBottom: 350 }}>
             <TinTin />
           </div>

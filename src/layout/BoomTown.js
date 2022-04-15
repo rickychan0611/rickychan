@@ -36,10 +36,10 @@ const BoomTown = () => {
       <Grid xs={12} md={6}>
         <Typography variant='h3' style={{ marginTop: 20 }}>
           Boom Town
-      </Typography>
+        </Typography>
         <Typography variant='body2' style={{ marginTop: 10, }}>
           Share, Borrow and Prosper. Boom Town is a full-stack website for sharing and borrowing different items. Users can upload an image, give it a description, choose appropriate tags and share it!
-      </Typography>
+        </Typography>
 
 
         <Box mt={2}>
@@ -48,7 +48,7 @@ const BoomTown = () => {
           </Typography>
           <Typography variant='body1' style={{ marginTop: 10 }}>
             React + Node.js + Apollo Express + PostgresSQL + Material UI
-    </Typography>
+          </Typography>
         </Box>
 
         <Box mt={2}>
@@ -56,7 +56,7 @@ const BoomTown = () => {
             onClick={() => window.open("https://boom.academy.red/", "_blank")}
           >
             Project is offline
-        </Button>
+          </Button>
 
           <Button startIcon={<i class="fa fa-github" aria-hidden="true" />}
             style={{ marginRight: 20, marginTop: 20 }}

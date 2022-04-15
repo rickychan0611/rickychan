@@ -36,7 +36,7 @@ const UrbanFavor = () => {
       <Grid xs={12} md={6}>
         <Typography variant='h3' style={{ marginTop: 20 }}>
           Urban Favor - Meal sharing
-      </Typography>
+        </Typography>
         <Typography variant='body2' style={{ marginTop: 10, }}>
           Urban Favor is still under development. Urban Favor is a meal-sharing platform. During the Covid-19 pandemic, many people are stuck at home. I see a phenomenon that many of them start to focus on their cooking skills and showing off on social media. This is why I came up with the idea of creating a platform for food provider to showcase their food at the same time, people can enjoy the taste. Users could also request food they liking and see if anyone could make it for them. This platform also has meal provider ranking and meal review. Users can also interact with meal providers by leaving questions on their posts. </Typography>
         <Box mt={2}>
@@ -44,15 +44,20 @@ const UrbanFavor = () => {
             Technologies:
           </Typography>
           <Typography variant='body1' style={{ marginTop: 10 }}>React + Firestore + Sementic-UI
-      </Typography>
+          </Typography>
         </Box>
 
         <Box mt={2}>
-          <Button variant="outlined" color="primary" style={{ marginRight: 20, marginTop: 20 }}
+          <Button variant="outlined" color="primary" disabled style={{ marginRight: 20, marginTop: 20 }}
+            // onClick={() => window.open("https://boom.academy.red/", "_blank")}
+          >
+            Project is offline
+          </Button>
+          {/* <Button variant="outlined" color="primary" style={{ marginRight: 20, marginTop: 20 }}
             onClick={() => window.open("https://www.urban-favor.com/", "_blank")}
           >
             Live Demo
-        </Button>
+        </Button> */}
 
           <Button startIcon={<i class="fa fa-github" aria-hidden="true" />}
             style={{ marginRight: 20, marginTop: 20 }}
