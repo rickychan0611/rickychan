@@ -39,19 +39,24 @@ const PeacefulMall = () => {
 
       <Grid xs={12} md={6}>
         <Typography variant='h3' style={{ marginTop: 20 }}>
-          Peaceful Mall Food Delivery App
+          Peaceful Mall
         </Typography>
         <Typography variant='body2' style={{ marginTop: 10, }}>
-          Peaceful Mall Delivery is an all-inclusive online food ordering app provides delivery or self pickup services. It is also a restaurant guide that not only do its covers a board spectrum of restaurant categroies, but it also offer a wide range of value-added services, discounts, user-written reviews and pro-written articles for your reference to hunt for good food.</Typography>
+          Peaceful Mall is a versatile online platform available on both web and mobile, designed to offer convenient dining and shopping experiences. As a one-stop solution, it provides users with access to high-quality services and products. Peaceful Mall offers four primary services: food delivery, food supplier connection, an e-commerce platform, and a social hub.           </Typography>
         <Box mt={2}>
           <Typography variant='h6' style={{ marginTop: 10 }}>
             Technologies:
           </Typography>
-          <Typography variant='body1' style={{ marginTop: 10 }}>React Native
+          <Typography variant='body1' style={{ marginTop: 10 }}>Nextjs and React Native
           </Typography>
         </Box>
 
         <Box mt={2}>
+          <Button variant="outlined" color="primary" style={{ marginRight: 20, marginTop: 20 }}
+            onClick={() => window.open("https://www.peacefulmall.com", "_blank")}
+          >
+            View Website
+          </Button>
           <Button variant="outlined" color="primary" style={{ marginRight: 20, marginTop: 20 }}
             onClick={() => window.open("https://apps.apple.com/ca/app/peaceful-mall/id1589739390", "_blank")}
           >

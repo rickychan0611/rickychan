@@ -21,7 +21,7 @@ import UrbanFavor from '../../layout/UrbanFavor'
 import PeacefulRest from "../../layout/PeacefulRest";
 import PeacefulMall from "../../layout/PeacefulMall";
 
-let initPages = window.innerWidth > 950 ? 10 : 10
+let initPages = window.innerWidth > 950 ? 5.8 : 7.2
 
 const AppDev = () => {
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 })
@@ -40,7 +40,6 @@ const AppDev = () => {
 
   return (
     <div >
-
       <Parallax pages={initPages}>
 
         <ParallaxLayer offset={1} speed={-2}
@@ -112,7 +111,7 @@ const AppDev = () => {
         >
           <Hidden smDown>
             <Box >
-              <Typography variant='h1' style={{ marginTop: '60vh' }}>
+              <Typography variant='h1' style={{ marginTop: '40vh' }}>
                 App Dev<span style={{ color: 'red' }}>.</span>
               </Typography>
             </Box>
@@ -120,10 +119,10 @@ const AppDev = () => {
 
           <Hidden mdUp>
             <Box >
-              <Typography variant='h1' style={{ marginTop: '70vh' }}>
+              <Typography variant='h1' style={{ marginTop: '60vh' }}>
                 App<span style={{ color: 'red' }}>.</span><br />
-              Dev
-            </Typography>
+                Dev
+              </Typography>
             </Box>
           </Hidden>
 
@@ -138,45 +137,47 @@ const AppDev = () => {
         {/* 1-------------------------------------------- */}
         <ParallaxLayer
           factor={factor1}
-          offset={1}
+          offset={0.9}
           speed={1}
           style={{
             paddingLeft: '5%', paddingRight: '5%', width: '85%',
-            alignItems: 'center'
+            // alignItems: 'center'
           }}
         >
-          <div style={{ marginBottom: 350 }}>
-            <PeacefulMall />
-          </div>
-          <div style={{ marginBottom: 350 }}>
-            <PeacefulRest />
-          </div>
-          <div style={{ marginBottom: 350 }}>
-            <TinTin />
-          </div>
-          <div style={{ marginBottom: 350 }}>
-            <LetMeOrder />
-          </div>
-          <div style={{ marginBottom: 350 }}>
-            <AmzClub />
-          </div>
-          <div style={{ marginBottom: 350 }}>
-            <UrbanFavor />
-          </div>
-          <div style={{ marginBottom: 350 }}>
-            <AlphaPay />
-          </div>
-          <div style={{ marginBottom: 350 }}>
-            <Laviro />
-          </div>
-          <div style={{ marginBottom: 350 }}>
-            <Sub4Sub />
-          </div>
-          <div style={{ marginBottom: 350 }}>
-            <BoomTown />
-          </div>
-          <div style={{ marginBottom: 350 }}>
-            <R10 />
+          <div>
+            <div style={{ marginBottom: 350, marginTop: 200 }}>
+              <PeacefulMall />
+            </div>
+            <div style={{ marginBottom: 350 }}>
+              <PeacefulRest />
+            </div>
+            <div style={{ marginBottom: 350 }}>
+              <TinTin />
+            </div>
+            <div style={{ marginBottom: 350 }}>
+              <LetMeOrder />
+            </div>
+            <div style={{ marginBottom: 350 }}>
+              <AmzClub />
+            </div>
+            <div style={{ marginBottom: 350 }}>
+              <UrbanFavor />
+            </div>
+            <div style={{ marginBottom: 350 }}>
+              <AlphaPay />
+            </div>
+            <div style={{ marginBottom: 350 }}>
+              <Laviro />
+            </div>
+            <div style={{ marginBottom: 350 }}>
+              <Sub4Sub />
+            </div>
+            <div style={{ marginBottom: 350 }}>
+              <BoomTown />
+            </div>
+            <div style={{ marginBottom: 350 }}>
+              <R10 />
+            </div>
           </div>
         </ParallaxLayer>
 
