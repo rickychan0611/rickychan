@@ -22,7 +22,8 @@ const MyName = () => {
       </Typography>
       <Box mt={3}>
         <Typography variant='h3'>
-          Front-end Developer & <br />Graphic Designer
+          Front-end Developer & <br />
+          Graphic Designer
       </Typography>
       </Box>
       <Typography variant='overline'>
