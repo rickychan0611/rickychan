@@ -13,7 +13,7 @@ const Footer = () => {
       </Typography>
       <Box mt={10}>
         <Typography variant='h3' style={{ marginTop: 10 }}>
-          Full Stack Developer & <br />Grahpic Designer
+          Full Stack Developer & <br />Graphic Designer
       </Typography>
       </Box>
       <Typography variant='h4' style={{ marginTop: 10 }}>
