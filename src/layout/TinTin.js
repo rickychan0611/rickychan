@@ -41,7 +41,7 @@ const LetMeOrder = () => {
       <Grid xs={12} md={6}>
         <Typography variant='h3' style={{ marginTop: 20 }}>
           Tin Tin Food Wholesale E-shop
-      </Typography>
+        </Typography>
         <Typography variant='body2' style={{ marginTop: 10, }}>
           Tin Tin Food Wholesale E-shop is an e-commerce platform that was built using React Native Web. It is available for Web, Android, and IOS which saves a lot of development time and cost. The app offers a great shopping experience to customers as well as great features for the seller. It also features a membership QR code scanning system and best route generator for delivery drivers.      </Typography>
 
@@ -50,15 +50,14 @@ const LetMeOrder = () => {
             Technologies:
           </Typography>
           <Typography variant='body1' style={{ marginTop: 10 }}>React Native Web + Nextjs + FireStore + React Native Paper
-      </Typography>
+          </Typography>
         </Box>
 
         <Box mt={2}>
-          <Button variant="outlined" color="primary" style={{ marginRight: 20, marginTop: 20 }}
-            onClick={() => window.open("https://tintinfood.ca", "_blank")}
+          <Button variant="outlined" color="primary" disabled style={{ marginRight: 20, marginTop: 20 }}
           >
-            View demo
-        </Button>
+            Project is offline
+          </Button>
 
           <Button startIcon={<i class="fa fa-github" aria-hidden="true" />}
             style={{ marginRight: 20, marginTop: 20 }}

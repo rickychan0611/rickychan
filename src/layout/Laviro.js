@@ -55,11 +55,10 @@ const Laviro = () => {
     </Typography>
         </Box>
         <Box mt={2}>
-          <Button variant="outlined" color="primary" style={{ marginRight: 20, marginTop: 20 }}
-            onClick={() => window.open("https://larivo.ca/about", "_blank")}
+        <Button variant="outlined" color="primary" disabled style={{ marginRight: 20, marginTop: 20 }}
           >
-            Larivo Website
-        </Button>
+            Project is offline
+          </Button>
           <Button startIcon={<i class="fa fa-github" aria-hidden="true" />}
             style={{ marginRight: 20, marginTop: 20 }}
             onClick={() => window.open("https://github.com/redacademy/larivo-WS2-2019", "_blank")}

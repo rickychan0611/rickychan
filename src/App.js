@@ -14,7 +14,7 @@ const App = () => {
     <div>
       <ThemeProvider theme={theme}>
         <BrowserRouter>
-          <div style={{ position: "absolute", zIndex: 1000, margin: 20 }}>
+          <div style={{ position: "fixed", zIndex: 1000, margin: 20 }}>
             <MenuDrawer></MenuDrawer>
           </div>
           <div style={{ zIndex: 1 }}>

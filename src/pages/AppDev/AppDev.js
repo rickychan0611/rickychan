@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef, useCallback } from "react"
-import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import useStyles from './styles'
@@ -20,170 +19,191 @@ import AlphaPay from '../../layout/AlphaPay'
 import UrbanFavor from '../../layout/UrbanFavor'
 import PeacefulRest from "../../layout/PeacefulRest";
 import PeacefulMall from "../../layout/PeacefulMall";
-
-let initPages = window.innerWidth > 950 ? 5.8 : 7.2
+import PomChat from "../../layout/PomChat";
 
 const AppDev = () => {
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 })
-  const [height1, setHeight1] = useState(0)
+  const [scrollY, setScrollY] = useState(0)
+  const backgroundRef = useRef(null)
 
   useEffect(() => {
     setScreenSize({ width: window.innerWidth, height: window.innerHeight });
+    
+    const handleScroll = () => {
+      setScrollY(window.scrollY)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // initPages------------------------------------
-  let factor1 = 1
-  if (screenSize.height < height1) {
-    initPages = initPages + (screenSize.height / height1)
-    factor1 = screenSize.height / height1
-  }
+  // Calculate background position based on scroll
+  const backgroundPosition = `${50 + (scrollY * 0.1)}% ${50 - (scrollY * 0.1)}%`
 
   return (
-    <div >
-      <Parallax pages={initPages}>
+    <div style={{ 
+      minHeight: '100vh',
+      background: 'white',
+      position: 'relative',
+      overflow: 'hidden'
+    }}>
+      {/* Animated Rainbow Background */}
+      <div 
+        ref={backgroundRef}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '200%',
+          height: '200%',
+          background: `
+            linear-gradient(60deg, 
+              rgb(255, 255, 255) 0%, 
+              rgba(219, 251, 249, 0.91) 14.28%, 
+              rgba(251, 251, 225, 0.93) 28.57%, 
+              rgb(255, 255, 255) 42.86%, 
+              rgb(237, 226, 248) 57.14%, 
+              rgba(242, 215, 233, 0.86) 71.43%, 
+              rgb(174, 213, 252) 85.71%, 
+              rgb(255, 255, 255) 100%
+            )
+          `,
+          backgroundSize: '300% 300%',
+          backgroundPosition: backgroundPosition,
+          zIndex: 0,
+          animation: 'rainbowMove 8s ease-in-out infinite',
+          transform: 'translate(-25%, -25%)'
+        }} 
+      />
 
-        <ParallaxLayer offset={1} speed={-2}
-          style={{
-            backgroundImage: 'linear-gradient(transparent, #d7faf1, #e5e3ff, transparent)',
-            height: 1000,
-          }}
-        />
-        <ParallaxLayer offset={1} speed={-2}
-          style={{
-            backgroundImage: 'linear-gradient(transparent, #d7faf1, #e5e3ff, transparent)',
-            height: 1000,
-          }}
-        />
-        <ParallaxLayer offset={1} speed={-2}
-          style={{
-            backgroundImage: 'linear-gradient(transparent, #d7faf1, #e5e3ff, transparent)',
-            height: 1000,
-          }}
-        />
+      {/* Background Image */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundImage: `url(${code})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'left top',
+        mixBlendMode: 'color-dodge',
+        opacity: 0.05,
+        zIndex: 1
+      }} />
 
-        <ParallaxLayer offset={1.9 + (initPages / 5)} speed={-3}
-          style={{
-            backgroundImage: 'linear-gradient(transparent, #b3edfc, #ffefcc, transparent)',
-            height: 1000,
-          }}
-        />
-
-        <ParallaxLayer offset={2.5 + (initPages / 5)} speed={-2}
-          style={{
-            backgroundImage: 'linear-gradient(transparent, #fbfce1, #def7dc, transparent)',
-            height: 1000,
-          }}
-        />
-        <ParallaxLayer offset={3.5 + (initPages / 5)} speed={-3}
-          style={{
-            backgroundImage: 'linear-gradient(transparent, #d7fbfc, #e3ffe0, transparent)',
-            height: 1000,
-          }}
-        />
-        <ParallaxLayer offset={4 + (initPages / 5)} speed={1}
-          style={{
-            backgroundImage: 'linear-gradient(transparent, #fcedfc, #d2f5fa, transparent)',
-            height: 2000,
-          }}
-        />
-
-        <ParallaxLayer offset={6 + (initPages / 5)} speed={-.5}
-          style={{
-            backgroundImage: 'linear-gradient(transparent, #ffefcc, #fcedfc, #d2f5fa, transparent, #b3edfc)',
-            height: 2000,
-          }}
-        />
-
-        <ParallaxLayer offset={0} speed={-.3}
-          style={{
-            backgroundImage: `url(${code})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'left top',
-            mixBlendMode: 'color-dodge',
-          }}
-        >
-        </ParallaxLayer>
-        {/* Title */}
-        <ParallaxLayer
-          offset={0}
-          speed={1}
-          style={{ paddingLeft: '5%', paddingRight: '5%' }}
-        >
+      {/* Content */}
+      <div style={{ 
+        position: 'relative', 
+        zIndex: 2,
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 20px'
+      }}>
+        {/* Title Section */}
+        <div style={{ 
+          paddingTop: '10vh',
+          paddingBottom: '5vh'
+        }}>
           <Hidden smDown>
-            <Box >
-              <Typography variant='h1' style={{ marginTop: '40vh' }}>
+            <Box>
+              <Typography variant='h1' style={{ 
+                color: '#333',
+                textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
+              }}>
                 App Dev<span style={{ color: 'red' }}>.</span>
               </Typography>
             </Box>
           </Hidden>
 
           <Hidden mdUp>
-            <Box >
-              <Typography variant='h1' style={{ marginTop: '60vh' }}>
+            <Box>
+              <Typography variant='h1' style={{ 
+                color: '#333',
+                textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
+              }}>
                 App<span style={{ color: 'red' }}>.</span><br />
                 Dev
               </Typography>
             </Box>
           </Hidden>
 
-          <Box mt={8} mb={20}>
-            <Typography variant='h3'>
+          <Box mt={8} mb={4}>
+            <Typography variant='h3' style={{ 
+              color: '#333',
+              textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
+            }}>
               My projects:
-              <hr />
+              <hr style={{ borderColor: '#333' }} />
             </Typography>
           </Box>
-        </ParallaxLayer>
+        </div>
 
-        {/* 1-------------------------------------------- */}
-        <ParallaxLayer
-          factor={factor1}
-          offset={0.9}
-          speed={1}
-          style={{
-            paddingLeft: '5%', paddingRight: '5%', width: '85%',
-            // alignItems: 'center'
-          }}
-        >
-          <div>
-            <div style={{ marginBottom: 350, marginTop: 200 }}>
+        {/* Components Section */}
+        <div style={{
+          paddingBottom: '5vh'
+        }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '100px'
+          }}>
+            <div>
+              <PomChat />
+            </div>
+            <div>
               <PeacefulMall />
             </div>
-            <div style={{ marginBottom: 350 }}>
+            <div>
               <PeacefulRest />
             </div>
-            <div style={{ marginBottom: 350 }}>
+            <div>
               <TinTin />
             </div>
-            <div style={{ marginBottom: 350 }}>
+            <div>
               <LetMeOrder />
             </div>
-            <div style={{ marginBottom: 350 }}>
+            <div>
               <AmzClub />
             </div>
-            <div style={{ marginBottom: 350 }}>
+            <div>
               <UrbanFavor />
             </div>
-            <div style={{ marginBottom: 350 }}>
+            <div>
               <AlphaPay />
             </div>
-            <div style={{ marginBottom: 350 }}>
+            <div>
               <Laviro />
             </div>
-            <div style={{ marginBottom: 350 }}>
+            <div>
               <Sub4Sub />
             </div>
-            <div style={{ marginBottom: 350 }}>
+            <div>
               <BoomTown />
             </div>
-            <div style={{ marginBottom: 350 }}>
+            <div>
               <R10 />
             </div>
           </div>
-        </ParallaxLayer>
+        </div>
+      </div>
 
-      </Parallax>
-
-    </div >
+      {/* CSS Animation for Rainbow Movement */}
+      <style>
+        {`
+          @keyframes rainbowMove {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+        `}
+      </style>
+    </div>
   )
 }
 

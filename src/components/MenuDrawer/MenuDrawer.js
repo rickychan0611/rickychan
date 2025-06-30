@@ -86,9 +86,18 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button variant="outlined" size="medium" onClick={toggleDrawer('left', true)} style={{ blackgroundColor: 'grey', color: 'grey' }}>
+      <Button 
+        variant="outlined" 
+        size="medium" 
+        onClick={toggleDrawer('left', true)} 
+        style={{ 
+          backgroundColor: 'white', 
+          color: '#333',
+          borderColor: '#ccc'
+        }}
+      >
         <MenuIcon style={{ marginRight: 5 }} /> Menu
-          </Button>
+      </Button>
       <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)}>
         {list('left')}
       </Drawer>
