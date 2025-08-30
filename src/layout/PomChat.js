@@ -55,9 +55,9 @@ const PeacefulMall = () => {
 
         <Box mt={2}>
           <Button variant="outlined" color="primary" style={{ marginRight: 20, marginTop: 20 }}
-            onClick={() => window.open("https://pomchat.live", "_blank")}
+            onClick={() => window.open("https://pomchat.live/invite/fb", "_blank")}
           >
-            View Website
+            View Web App
           </Button>
         </Box>
         <Typography variant='body2' style={{ marginTop: 10, fontStyle: 'italic', color: 'red' }}>

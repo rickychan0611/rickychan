@@ -148,13 +148,13 @@ const AppDev = () => {
             gap: '100px'
           }}>
             <div>
-              <PomChat />
-            </div>
-            <div>
               <PeacefulMall />
             </div>
             <div>
               <PeacefulRest />
+            </div>
+            <div>
+              <PomChat />
             </div>
             <div>
               <TinTin />
